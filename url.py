@@ -6,7 +6,7 @@ import random
 import getpass
 
 class URL:
-    username = 'cok'
+    username = ''
     password = ''
     hashtags = []
     links    = []
