@@ -1,0 +1,10 @@
+'handbouquet',
+'floristjakarta',
+'handbouquetmurah',
+'handbouquetwedding',
+'handbouquetjakarta',
+'floristjogja',
+'floristsurabaya',
+'bungahias',
+'floristry',
+'floristlife'
