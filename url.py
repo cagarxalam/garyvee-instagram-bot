@@ -12,32 +12,10 @@ class URL:
     links    = []
 
     def __init__(self):
-        self.globalInput()
         self.browser = webdriver.Firefox()
         self.login()
         self.TopPost()
         self.finalize()
-
-    def globalInput(self):
-        print("Silahkan masukkan username")
-        username = input()
-        print("Silahkan masukkan password")
-        password = getpass.getpass(prompt = "")
-
-        self.username = username
-        self.password = password
-
-        print("Silahkan masukkan hashtags")
-        for i in range(0,10):
-            tags = input()
-            if tags != "":
-                self.hashtags.append(tags)
-            else:
-                break
-        
-        if (self.username == "" or self.password == "" or len(self.hashtags) == 0):
-            print("ulangi bot dari awal")
-            sys.exit()
 
     def login(self):
         self.browser.get("https://www.instagram.com")

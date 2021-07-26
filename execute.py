@@ -17,24 +17,10 @@ class Execute:
         
     ]
     def __init__(self):
-        self.InputBefore()
         self.browser = webdriver.Firefox()
         self.login()
         self.goToPost()
         self.selesai()
-
-    def InputBefore(self):
-        print("Input Username")
-        username = input("")
-
-        print("Input Password")
-        password = getpass.getpass(prompt = "")
-
-        if (input == "" or password == ""):
-            sys.exit()
-        else:
-            self.username = username
-            self.password = password
 
     def login(self):
         self.browser.get("https://www.instagram.com")
