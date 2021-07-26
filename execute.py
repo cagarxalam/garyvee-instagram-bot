@@ -7,7 +7,7 @@ import getpass
 
 class Execute:
     username = ''
-    password = ''
+    password = 'a'
 
     links = [
         
