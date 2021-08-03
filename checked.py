@@ -22,7 +22,6 @@ class Checked:
             i+=1
             
             print("Apakah postingan "+link+" "+str(i)+" of "+str(len(self.links))+" akan anda like atau komen? y/n")
-            time.sleep(3)
 
             next = getpass.getpass(prompt = "")
             if next == "y":
