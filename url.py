@@ -6,9 +6,12 @@ import random
 import getpass
 
 class URL:
-    username = ''
-    password = ''
-    hashtags = []
+    username = 'theimmortalworks'
+    password = 'akuselalusabarYaAllah'
+    hashtags = [
+    	'thebridestory', 'junebugswedding', 'bridestory', 'preweddingindonesia', 'weddingsurabaya',
+	'preweddingsurabaya', 'weddingjogja', 'preweddingjogja', 'weddingsolo', 'preweddingstyle'
+    ]
     links    = []
 
     def __init__(self):
