@@ -6,11 +6,10 @@ import random
 import getpass
 
 class URL:
-    username = 'theimmortalworks'
-    password = 'akuselalusabarYaAllah'
+    username = ''
+    password = ''
     hashtags = [
-    	'thebridestory', 'junebugswedding', 'bridestory', 'preweddingindonesia', 'weddingsurabaya',
-	'preweddingsurabaya', 'weddingjogja', 'preweddingjogja', 'weddingsolo', 'preweddingstyle'
+    	
     ]
     links    = []
 
@@ -60,7 +59,7 @@ class URL:
                     if like_links not in self.links:
                         self.links.append(like_links)
 
-                close_click = self.browser.find_element_by_xpath("/html/body/div[5]/div[3]/button")
+                close_click = self.browser.find_element_by_xpath("//div[@class='QBdPU ']/*[name()='svg' and @aria-label='Close']").find_element_by_xpath("..")
                 close_click.click()
                 time.sleep(3)
 

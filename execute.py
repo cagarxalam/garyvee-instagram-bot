@@ -10,11 +10,11 @@ class Execute:
     password = ''
 
     links = [
-        
+    
     ]
 
     comments = [
-        
+    
     ]
     def __init__(self):
         self.browser = webdriver.Firefox()
@@ -42,11 +42,11 @@ class Execute:
 
     def goToPost(self):
         for i,posts in enumerate(self.links):
+       	    sleeptime = random.randint(60,75)
             self.browser.get("https://www.instagram.com/p/"+posts+"/")
-            time.sleep(3)
+            time.sleep(sleeptime)
             
             self.browser.execute_script("window.scrollTo(0,200);")
-            time.sleep(4)
 
             if self.comments[i] != 'null':
                 comment = lambda: self.browser.find_element_by_tag_name("textarea")
@@ -56,16 +56,14 @@ class Execute:
 
                 comment().send_keys(Keys.RETURN)
                 time.sleep(3)
-            
+                
             self.like()
 
             i+=1
             print("execute "+str(i)+" of "+str(len(self.links)))
-            sleeptime = random.randint(90,105)
-            time.sleep(sleeptime)
 
     def like(self):
-        like_button = lambda: self.browser.find_element_by_xpath("/html/body/div[1]/section/main/div/div[1]/article/div[3]/section[1]/span[1]/button")
+        like_button = lambda: self.browser.find_element_by_xpath("//div[@class='QBdPU ']/span/*[name()='svg' and @aria-label='Like']").find_element_by_xpath("..")
         like_button().click()
 
     def selesai(self):

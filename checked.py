@@ -5,7 +5,7 @@ import time
 
 class Checked:
     links = [
-    	
+        
     ]
 
     final_links = []
@@ -17,7 +17,7 @@ class Checked:
         self.finish()
 
     def checked_post(self):
-        for i, link in enumerate(self.links):
+        for i,link in enumerate(self.links):
             self.browser.get("https://www.instagram.com/p/"+link+"/")
             i+=1
             
